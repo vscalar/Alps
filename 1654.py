@@ -15,22 +15,19 @@ for _ in range(K):
     length = int(input())
     lines.append(length)
 
-ans = 0
-def findLength(low: int, high: int, lines: list[int]) -> int:
+
+def findLength(low: int, high: int, ans: int, lines: list[int]) -> int:
     if low > high:
-        return
+        return ans
     
-    global ans
     mid = (low + high) // 2
     
     isSolvable = isSolved(mid, lines, N)
     
     if isSolvable:
-        ans = mid
-        findLength(mid+1, high, lines)
+        return findLength(mid+1, high, mid, lines)
     
     else:
-        findLength(low, mid-1, lines)
+        return findLength(low, mid-1, ans, lines)
 
-findLength(1, max(lines), lines)
-print(ans)
+print(findLength(1, max(lines), 0, lines))
