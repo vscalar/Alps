@@ -1,7 +1,7 @@
 import sys
 input = sys.stdin.readline
 
-#https://www.acmicpc.net/problem/32864
+#https://www.acmicpc.net/problem/9012
 
 if __name__ == "__main__":
     
