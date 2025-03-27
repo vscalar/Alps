@@ -1,7 +1,7 @@
 import sys
 input = sys.stdin.readline
 
-#https://www.acmicpc.net/problem/15654
+#https://www.acmicpc.net/problem/15655
 
 #make a seq and print
 def dfs(stack:list[int], nums:list[int], N:int, M:int) -> None:
