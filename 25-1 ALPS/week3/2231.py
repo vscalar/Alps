@@ -22,7 +22,7 @@ if __name__ == "__main__":
     #set ans
     ans = 0
     #iterate
-    for i in range(N-1, 0, -1):
+    for i in range(N-1, N//2 - 1, -1):
         if is_inducer(i, N):
             ans = i
     print(ans)
